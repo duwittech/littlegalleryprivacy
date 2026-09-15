@@ -5,7 +5,8 @@ the app's own subdomain. No build step, no Jekyll (`.nojekyll` is there to say
 so), no JavaScript.
 
 ```
-index.html      landing page, with the support section the stores link to
+index.html      landing page
+support.html    served at /support — the store listings' support URL
 privacy.html    served at /privacy — the URL the Play listing requires
 terms.html      served at /terms — subscription terms, cancellation, liability
 404.html
