@@ -5,14 +5,19 @@ the app's own subdomain. No build step, no Jekyll (`.nojekyll` is there to say
 so), no JavaScript.
 
 ```
-index.html      landing page, with the support section Play links to
-privacy.html    the privacy policy URL the Play listing requires
-terms.html      subscription terms, cancellation, liability
+index.html      landing page, with the support section the stores link to
+privacy.html    served at /privacy — the URL the Play listing requires
+terms.html      served at /terms — subscription terms, cancellation, liability
 404.html
 assets/style.css   the app's palette (see lib/core/theme/app_palette.dart)
 assets/icon.png    the launcher icon, copied from the app
 CNAME           the custom domain, one line, no scheme
 ```
+
+GitHub Pages resolves an extensionless path to the matching `.html` file, so
+`/privacy` and `/terms` are the URLs to hand out — they are what the pages
+declare as canonical and what the app and the store listings link to. The
+`.html` forms still answer, so any link already in the wild keeps working.
 
 ## Publishing
 
