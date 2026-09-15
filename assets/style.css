@@ -103,7 +103,27 @@ a:focus-visible, .button:focus-visible {
 
 .button:hover { background: #82320f; }
 
-.button-note { display: block; margin-top: 0.7rem; font-size: 0.9rem; color: var(--ink-muted); }
+/* The two stores sit side by side; iPhone is not buyable yet, so it reads as
+   a label rather than a button that would go nowhere. */
+.stores { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; }
+
+.button-soon {
+  display: inline-block;
+  border: 1px dashed var(--hairline);
+  color: var(--ink-muted);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+}
+
+.button-note {
+  display: block;
+  margin-top: 0.9rem;
+  max-width: var(--measure);
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+}
 
 /* ---- Content sections ------------------------------------------------ */
 
